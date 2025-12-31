@@ -516,3 +516,49 @@ body {
   margin: 16px 0 20px;
   transform: scale(1.2);   /* 箭头整体放大 */
 }
+/* =========================
+   LINE 按钮动态呼吸效果
+   ========================= */
+
+.btn-line,
+.cta-btn {
+  position: relative;
+  animation: linePulse 1.8s ease-in-out infinite;
+}
+
+/* 外圈光晕 */
+.btn-line::after,
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 999px;
+  background: rgba(6, 199, 85, 0.35);
+  z-index: -1;
+  animation: lineRipple 1.8s ease-out infinite;
+}
+
+/* 按钮本体缩放 */
+@keyframes linePulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 外圈扩散 */
+@keyframes lineRipple {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}
