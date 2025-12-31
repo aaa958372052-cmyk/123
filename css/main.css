@@ -516,11 +516,14 @@ body {
   margin: 16px 0 20px;
   transform: scale(1.2);   /* 箭头整体放大 */
 }
+/* =========================
+   LINE 按钮动态呼吸效果（修复版）
+   ========================= */
 
 .btn-line,
 .cta-btn {
   position: relative;
-  z-index: 1; /* 🔥 关键：按钮抬到最上层 */
+  z-index: 1;
   animation: linePulse 1.8s ease-in-out infinite;
 }
 
