@@ -438,8 +438,12 @@ body {
   width: 2px;
   height: 36px;
   background: #06c755;
-  margin: 0 auto 32px;
+
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  margin: 16px 0 32px;
 }
 
 .cta-arrow::after {
