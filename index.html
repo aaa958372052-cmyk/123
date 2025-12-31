@@ -24,34 +24,68 @@
   <!-- End Meta Pixel Code -->
 <style>
 /* =========================
-   LINE 按钮动态效果（软件可用版）
+   广告级 LINE 闪动按钮
+   （适合投放 / 转化页）
 ========================= */
 
 .btn-line,
 .cta-btn {
+  position: relative;
   display: inline-block;
-  background: #06c755;
+  background: linear-gradient(135deg, #06c755, #00e676);
   color: #fff;
-  font-weight: bold;
+  font-weight: 800;
   border-radius: 999px;
-  animation: linePulse 1.5s infinite;
+  text-decoration: none;
+  animation: pulseZoom 1.4s infinite;
+  overflow: visible;
 }
 
-@keyframes linePulse {
+/* 主体跳动 */
+@keyframes pulseZoom {
   0% {
-    box-shadow: 0 0 0 0 rgba(6,199,85,0.6);
     transform: scale(1);
   }
-  70% {
-    box-shadow: 0 0 0 18px rgba(6,199,85,0);
+  40% {
+    transform: scale(1.08);
+  }
+  60% {
     transform: scale(1.05);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(6,199,85,0);
     transform: scale(1);
   }
 }
-</style>	
+
+/* 外圈扩散光晕 */
+.btn-line::after,
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 999px;
+  background: rgba(6, 199, 85, 0.45);
+  z-index: -1;
+  animation: ripple 1.4s infinite;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* 点击时反馈 */
+.btn-line:active,
+.cta-btn:active {
+  transform: scale(0.96);
+}
+</style>
 </head>
 <body>
 
@@ -268,3 +302,4 @@ Kei はタフツ大学を最優等（magna cum laude）で卒業し、国際関�
 </body>
 
 </html>
+
