@@ -22,6 +22,36 @@
   fbq('track', 'PageView');
   </script>
   <!-- End Meta Pixel Code -->
+<style>
+/* =========================
+   LINE 按钮动态效果（软件可用版）
+========================= */
+
+.btn-line,
+.cta-btn {
+  display: inline-block;
+  background: #06c755;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 999px;
+  animation: linePulse 1.5s infinite;
+}
+
+@keyframes linePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(6,199,85,0.6);
+    transform: scale(1);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(6,199,85,0);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(6,199,85,0);
+    transform: scale(1);
+  }
+}
+</style>	
 </head>
 <body>
 
@@ -236,4 +266,5 @@ Kei はタフツ大学を最優等（magna cum laude）で卒業し、国際関�
 
 <script src="js/pixel-line.js"></script>
 </body>
+
 </html>
