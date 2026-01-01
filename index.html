@@ -94,19 +94,23 @@
   position: absolute;
   left: 8%;
   width: 84%;
-
-  bottom: 8%;        /* 👈 关键：贴近白框底部 */
+  bottom: 8%;
   z-index: 20;
 
-  animation: pulseBtn 1.4s infinite;
+  animation: breathing 1.6s ease-in-out infinite;
+  transform-origin: center center;
 }
 
-/* 呼吸放大缩小动画 */
-@keyframes pulseBtn {
-  0%   { transform: scale(1); }
-  40%  { transform: scale(1.06); }
-  60%  { transform: scale(0.98); }
-  100% { transform: scale(1); }
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.045); /* 👈 很轻微 */
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .btn-in-white img {
@@ -159,5 +163,6 @@
 
 </body>
 </html>
+
 
 
