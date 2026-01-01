@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>マネトレ式ポートフォリオ投資戦略セミナー</title>
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      background:#fff;
+      font-family:-apple-system,BlinkMacSystemFont,
+      "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+    }
+
+    main {
+      max-width:750px;
+      margin:0 auto;
+    }
+
+    img {
+      width:100%;
+      display:block;
+    }
+
+    section {
+      position:relative; /* 🔴 核心 */
+    }
+
+    /* ======================
+       公共按钮（不动）
+    ====================== */
+    .btn-in-white {
+      position:absolute;
+      left:8%;
+      width:84%;
+      z-index:20;
+    }
+
+    .btn-in-white img {
+      width:100%;
+      display:block;
+    }
+
+    /* ======================
+       三个白框定位（你已算好）
+    ====================== */
+
+    /* ① 公司概要下面 */
+    .btn-company {
+      top:22.2%;
+    }
+
+    /* ② 中间红框下面（重点） */
+    .btn-middle {
+      top:12.8%;
+    }
+
+    /* ③ 页面最底部 */
+    .btn-bottom {
+      top:90.7%;
+    }
+
+    /* ======================
+       底部 CTA（正常按钮）
+    ====================== */
+    .cta-wrap {
+      display:flex;
+      justify-content:center;
+      padding:24px 0 32px;
+    }
+
+    .cta {
+      width:90%;
+      max-width:620px;
+      animation:dokidoki 1.3s infinite;
+    }
+
+    @keyframes dokidoki {
+      0%{transform:scale(1)}
+      30%{transform:scale(1.05)}
+      50%{transform:scale(.97)}
+      70%{transform:scale(1.03)}
+      100%{transform:scale(1)}
+    }
+  </style>
+</head>
+
+<body>
+
+<main>
+
+  <!-- ===== 01 公司概要 ===== -->
+  <section>
+    <img src="img/01.png" alt="">
+    <a href="https://deadss.com/j/qUfGM8kt"
+       class="btn-in-white btn-company"
+       target="_blank">
+      <img src="img/btn.png" alt="">
+    </a>
+  </section>
+
+  <!-- ===== 02 中间大白框（重点） ===== -->
+  <section>
+    <img src="img/02.png" alt="">
+    <a href="https://deadss.com/j/qUfGM8kt"
+       class="btn-in-white btn-middle"
+       target="_blank">
+      <img src="img/btn.png" alt="">
+    </a>
+  </section>
+
+  <section><img src="img/03.png"></section>
+  <section><img src="img/04.png"></section>
+  <section><img src="img/05.png"></section>
+  <section><img src="img/06.png"></section>
+
+  <!-- ===== 07 最底部白框 ===== -->
+  <section>
+    <img src="img/07.png" alt="">
+    <a href="https://deadss.com/j/qUfGM8kt"
+       class="btn-in-white btn-bottom"
+       target="_blank">
+      <img src="img/btn.png" alt="">
+    </a>
+  </section>
+
+</main>
+
+</body>
+</html>
